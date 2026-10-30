@@ -28,44 +28,12 @@ I work end-to-end: ingestion and modelling in Databricks, streaming and batch pi
 
 ## Featured Work
 
-<table>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/sanjeevpandeydata/unity-catalog-dr-sync">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=sanjeevpandeydata&repo=unity-catalog-dr-sync&theme=tokyonight&hide_border=true" alt="Unity Catalog DR Sync repository" />
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://github.com/sanjeevpandeydata/azure-etl-pipeline">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=sanjeevpandeydata&repo=azure-etl-pipeline&theme=tokyonight&hide_border=true" alt="Azure ETL Pipeline repository" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/sanjeevpandeydata/eventhub-streaming-pipeline">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=sanjeevpandeydata&repo=eventhub-streaming-pipeline&theme=tokyonight&hide_border=true" alt="Event Hub Streaming Pipeline repository" />
-      </a>
-    </td>
-    <td width="50%" valign="top">
-
-**News Knowledge Assistant** — *in progress*
-
-A RAG assistant over daily newspaper PDFs on Databricks. Text is chunked with metadata (newspaper, date, page, article), embedded for vector search, and answered with Llama 3.1 — citing the exact source for every answer.
-
-*Databricks · RAG · Llama 3.1 · Vector Search*
-
-</td>
-  </tr>
-</table>
-
-### What each project proves
-
-| Project | Result / highlight |
-|---|---|
-| **Unity Catalog DR Sync** | Two workflows, six notebooks: metadata skeleton first, then DEEP CLONE data, volumes, views, and delta-only grants. CSV-driven, no hardcoded names or secrets. |
-| **Azure ETL Pipeline** | 50M+ CRM records/month. Data availability **T+2 days → under 4 hours**, runtime **2 hours → 35 minutes**, ~40% compute cost reduction. |
-| **Event Hub Streaming Pipeline** | Real-time Avro streaming with Auto Loader, dynamic schemas, JSON validation, and idempotent MERGE upserts for at-least-once delivery. |
+| Project | What it does | Result / highlight |
+|---|---|---|
+| **[Unity Catalog DR Sync](https://github.com/sanjeevpandeydata/unity-catalog-dr-sync)** | Disaster recovery for Unity Catalog: two workflows, six notebooks that recreate credentials, external locations, catalogs, and schemas in a DR workspace, then sync data, volumes, and views, and apply grants. | Metadata skeleton first, then DEEP CLONE data and delta-only grants. CSV-driven, no hardcoded names or secrets. |
+| **[Azure ETL Pipeline](https://github.com/sanjeevpandeydata/azure-etl-pipeline)** | Scalable ELT pipeline for CRM data, using Azure Data Factory + Databricks and Medallion architecture. | 50M+ records/month. Data availability **T+2 days → under 4 hours**, runtime **2 hours → 35 minutes**, ~40% compute cost reduction. |
+| **[Event Hub Streaming Pipeline](https://github.com/sanjeevpandeydata/eventhub-streaming-pipeline)** | Real-time streaming ingestion on Databricks, consuming Avro messages from Azure Event Hubs with Structured Streaming and Auto Loader. | Dynamic schemas, JSON validation, ROW_NUMBER deduplication, and idempotent MERGE upserts for at-least-once delivery. |
+| **News Knowledge Assistant** — *in progress* | A RAG assistant over daily newspaper PDFs on Databricks. Text is chunked with metadata (newspaper, date, page, article), embedded for vector search, and answered with Llama 3.1 — citing the exact source for every answer. | *Databricks · RAG · Llama 3.1 · Vector Search* — repository coming soon. |
 
 ---
 
@@ -97,17 +65,6 @@ A RAG assistant over daily newspaper PDFs on Databricks. Text is chunked with me
 ![Agentic AI](https://img.shields.io/badge/Agentic_AI-6C5CE7?style=flat-square)
 ![Vector Databases](https://img.shields.io/badge/Vector_Databases-6C5CE7?style=flat-square)
 ![Prompt Engineering](https://img.shields.io/badge/Prompt_Engineering-6C5CE7?style=flat-square)
-
-</div>
-
----
-
-## GitHub Stats
-
-<div align="center">
-
-![Sanjeev's GitHub stats](https://github-readme-stats.vercel.app/api?username=sanjeevpandeydata&show_icons=true&theme=tokyonight&hide_border=true&count_private=false)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sanjeevpandeydata&layout=compact&theme=tokyonight&hide_border=true)
 
 </div>
 
