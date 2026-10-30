@@ -14,6 +14,7 @@ I build reliable data pipelines and, increasingly, the AI systems that sit on to
 - **Streaming:** Real-time ingestion with Azure Event Hubs, Spark Structured Streaming, and Auto Loader, with MERGE-based deduplication for at-least-once delivery
 - **AI on data:** RAG pipelines with Databricks, vector search, and Llama 3.1 — grounded answers with traceable source citations, not just generated text
 - **Modelling & optimisation:** Medallion architecture (Bronze → Silver → Gold), Spark optimisation, and data modelling for reporting-ready Gold layers
+- **Disaster recovery:** Unity Catalog DR sync across Databricks workspaces — metadata, DEEP CLONE data, views, and grants, rebuilt idempotently in the DR workspace
 
 ---
 
@@ -47,6 +48,12 @@ Real-time streaming ingestion on Databricks, consuming Avro messages from Azure 
 **Highlights:** Dynamic schema loading, JSON validation, ROW_NUMBER deduplication, and idempotent MERGE upserts into Delta Lake.
 
 → [sanjeevpandeydata/eventhub-streaming-pipeline](https://github.com/sanjeevpandeydata/eventhub-streaming-pipeline)
+
+#### 🔹 Unity Catalog DR Sync
+Disaster recovery framework for Unity Catalog: two Databricks workflows and six notebooks that recreate credentials, external locations, catalogs, and schemas in a DR workspace, then DEEP CLONE Delta tables, sync volumes and views, and apply only the changed grants.
+**Highlights:** CSV-driven mapping with no hardcoded names or URLs, secrets via Secret Scope, idempotent re-runs, and a delta-only permissions PATCH.
+
+→ [sanjeevpandeydata/unity-catalog-dr-sync](https://github.com/sanjeevpandeydata/unity-catalog-dr-sync)
 
 #### 🔹 News Knowledge Assistant — *currently building*
 A RAG assistant over daily newspaper PDFs on Databricks. It extracts and chunks text with metadata (newspaper, date, page, article), generates embeddings for vector search, retrieves the most relevant chunks for a question, and answers with Llama 3.1 — citing the exact newspaper, date, page, and article so every answer can be verified.
