@@ -14,8 +14,6 @@
 
 ## About
 
-Data Engineer at **Multiapps Technologies** (Jul 2023 – Present), building reliable data platforms on Azure — and the AI systems that sit on top of them.
-
 I work end-to-end: ingestion and modelling in Databricks, streaming and batch pipelines in production, and RAG / LLM applications grounded in that same data, with traceable sources. My focus now is where data engineering meets GenAI: **Unity Catalog, Delta Lake, vector search, and agentic workflows on one platform.**
 
 **Currently focused on**
@@ -35,7 +33,7 @@ I work end-to-end: ingestion and modelling in Databricks, streaming and batch pi
 | **[Event Hub Streaming Pipeline](https://github.com/sanjeevpandeydata/eventhub-streaming-pipeline)** | Real-time streaming ingestion on Databricks, consuming Avro messages from Azure Event Hubs with Structured Streaming and Auto Loader. | Dynamic schemas, JSON validation, ROW_NUMBER deduplication, and idempotent MERGE upserts for at-least-once delivery. |
 | **[Delta Lake to MySQL Data Copy](https://github.com/sanjeevpandeydata/delta-to-mysql-datacopy)** | Copies a leads report table from Delta Lake to MySQL in full-reload and daily modes, replacing driver-side `collect()` + `executemany()` with distributed `mapInPandas` inserts and a JDBC anti-join for dedup. | Parallel inserts across executors with per-partition MySQL connections; serverless-compatible, with no driver bottleneck. |
 | **[Spark Performance & Cost Optimisation](https://github.com/sanjeevpandeydata/spark-performance-optimization)** | Measured benchmark for Spark layout optimisation: partitioning, Z-ordering with `OPTIMIZE`, and broadcast joins on a synthetic sales dataset, with the same queries run unchanged against each layout. | Median of repeated runs, with files touched recorded; no result claimed until run on Databricks. |
-| **News Knowledge Assistant** — *in progress* | A RAG assistant over daily newspaper PDFs on Databricks. Text is chunked with metadata (newspaper, date, page, article), embedded for vector search, and answered with Llama 3.1 — citing the exact source for every answer. | *Databricks · RAG · Llama 3.1 · Vector Search* — repository coming soon. |
+| **[NewsVault AI](https://github.com/sanjeevpandeydata/newsvault-ai)** | Newspaper intelligence & RAG on Databricks Free Edition: spatial article reconstruction, article-aware chunking, embeddings, Vector Search, and grounded answers with citations. | Phases 1–9 verified on 2 newspaper PDFs; daily pipeline built, app held. |
 
 ---
 
